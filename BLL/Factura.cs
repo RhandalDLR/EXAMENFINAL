@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Factura
 {
     
-    public DateTime Fecha { get; set; } = DateTime.Now;
+    public DateTime Fecha { get; set; } 
     public string Cliente { get; set; }
     public List<DetFactura> ListaDetalle { get; set; } = new List<DetFactura>();
 
