@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Reporte;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,14 @@ namespace GUI
 {
     public partial class Facturacion : Form
     {
-        
+        Factura factura = new Factura();
         DetFactura detFactura = new DetFactura();
         public Facturacion() {
             InitializeComponent();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e) {
-            Factura factura = new Factura();
+            //Factura factura = new Factura();
             factura.Fecha = Convert.ToDateTime(this.dtpFecha.Text);
             factura.Cliente = this.txtCliente.Text;
             detFactura.Producto = this.txtProducto.Text;
@@ -34,7 +36,20 @@ namespace GUI
             factura.CalcularDescuento();
             factura.CalcularTotal();
 
-            
+
+
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e) {
+            frmVisorReportes frmVisor = new frmVisorReportes();
+
+            List<DetFactura> detFacturas = factura.GetDets();
+
+            string nombreReporte = "Reporte.Reportes.Factura.rdlc";
+
+            frmVisor.Imprimir(nombreReporte, detFacturas);
+
+
 
         }
     }

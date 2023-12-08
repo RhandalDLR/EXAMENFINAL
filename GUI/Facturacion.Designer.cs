@@ -38,6 +38,7 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.DTGFactura = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DTGFactura)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,11 +140,22 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Factura
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(479, 260);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(118, 42);
+            this.btnImprimir.TabIndex = 13;
+            this.btnImprimir.Text = "Imprimir Factura";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // Facturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 590);
+            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.DTGFactura);
             this.Controls.Add(this.dtpFecha);
@@ -157,7 +169,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Factura";
+            this.Name = "Facturacion";
             this.Text = "Factura";
             ((System.ComponentModel.ISupportInitialize)(this.DTGFactura)).EndInit();
             this.ResumeLayout(false);
@@ -179,5 +191,6 @@
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.DataGridView DTGFactura;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DetFactura.cs" />
     <Compile Include="Factura.cs" />
+    <Compile Include="Factura1.cs" />
     <Compile Include="Ingrediente.cs" />
     <Compile Include="Nomina.cs" />
     <Compile Include="Producto.cs" />

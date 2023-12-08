@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using BLL;
+using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +17,22 @@ namespace Reporte
     {
         public frmVisorReportes() {
             InitializeComponent();
+        }
+
+        private void frmVisorReportes_Load(object sender, EventArgs e) {
+
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
+        }
+
+        public void Imprimir(string nombreReporte, List<DetFactura> ListadetFacturas) {
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = nombreReporte;
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DsFactura", ListadetFacturas));
+            //this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("DsDet"));
+            this.reportViewer1.RefreshReport();
+            this.Show();
+
         }
     }
 }

@@ -1,11 +1,12 @@
-
-using BLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class Factura
+    public class Factura1
     {
 
         public DateTime Fecha = DateTime.Now;
@@ -53,6 +54,6 @@ namespace BLL
 
             return ListaDetalle;
         }
+
     }
 }
-

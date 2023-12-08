@@ -73,6 +73,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmVisorReportes.resx">
+      <DependentUpon>frmVisorReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -84,6 +87,12 @@
     </Compile>
     <EmbeddedResource Include="Reportes\Factura.rdlc" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BLL.DetFactura.datasource" />
+    <None Include="Properties\DataSources\BLL.Factura.datasource" />
+    <None Include="Properties\DataSources\BLL.Ingrediente.datasource" />
+    <None Include="Properties\DataSources\BLL.Nomina.datasource" />
+    <None Include="Properties\DataSources\BLL.Productos.datasource" />
+    <None Include="Properties\DataSources\BLL.Profesores.datasource" />
     <None Include="Properties\DataSources\DetFactura.datasource" />
     <None Include="Properties\DataSources\Factura.datasource" />
     <None Include="Properties\Settings.settings">
